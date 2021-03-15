@@ -16,13 +16,14 @@ def QuickSort(array):
 	head = QuickSort(head)
 	tail = QuickSort(tail)
 	head.append(pivot)
-	head.extend(tail)
+	head.extend(tail) 
 	return  head
 
 """Test random numbers in range(x) with randit(y, z) size"""
 randomlist = []
-for i in range(0,3):
-	n = random.randint(1,50000000000)
+for i in range(0,300):
+	n = random.randint(1,50000)
 	randomlist.append(n)
 
 print(QuickSort(randomlist))
+print((time.time() - start_time), "seconds.")
